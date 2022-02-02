@@ -1033,6 +1033,12 @@ button {
           transform: rotate(180deg);
 }
 
+@media (max-width: 578px) {
+  .scroll-top {
+    display: none;
+  }
+}
+
 @-webkit-keyframes scroll-top {
   0% {
     -webkit-transform: translateY(0);

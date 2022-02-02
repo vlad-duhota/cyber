@@ -190,6 +190,9 @@ button{
     img{
         transform: rotate(180deg);
     }
+    @media (max-width:578px) {
+        display: none;
+    }
 }
 // anim
 @keyframes scroll-top {
