@@ -114,15 +114,7 @@ button {
   font-weight: 600;
 }
 
-.header .conect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
 .header .conect a {
-  display: inline-block;
   color: inherit;
   -webkit-transition: color .3s;
   transition: color .3s;
@@ -348,7 +340,7 @@ button {
   height: calc(100% - 110px);
   right: 0;
   bottom: 0;
-  background: url(../img/hero2.jpg) center/cover no-repeat;
+  background: url(../img/hero.jpg) center/cover no-repeat;
 }
 
 @media (max-width: 543px) {
@@ -1013,102 +1005,4 @@ button {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   font-size: 34px;
-}
-
-.pop-up2 {
-  position: fixed;
-  z-index: 31;
-  width: 100%;
-  height: 100vh;
-  top: -150vh;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: top .3s;
-  transition: top .3s;
-}
-
-.pop-up2.open {
-  top: 0;
-}
-
-.pop-up2 form {
-  padding: 54px 30px;
-  border-radius: 40px;
-  background: #fff;
-}
-
-.pop-up2 form input {
-  width: 100%;
-  display: block;
-  margin: 20px auto 0;
-  border-radius: 25px;
-  background-color: #E5EFF7;
-  border: none;
-  padding: 20px;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-}
-
-.pop-up2 form input:focus {
-  outline: none;
-  background-color: #bad0e0;
-}
-
-.pop-up2 form textarea {
-  padding: 20px;
-  width: 100%;
-  display: block;
-  margin: 20px auto 0;
-  border-radius: 25px;
-  background-color: #E5EFF7;
-  border: none;
-  resize: vertical;
-  min-height: 150px;
-  max-height: 250px;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-}
-
-.pop-up2 form textarea:focus {
-  outline: none;
-  background-color: #bad0e0;
-}
-
-.pop-up2 form > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.pop-up2 form .close {
-  color: #909ca7;
-  font-size: 40px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.pop-up2 form .send-btn {
-  display: block;
-  width: 100%;
-  border: none;
-  background: #0184ff;
-  color: #fff;
-  font-size: 24px;
-  border-radius: 25px;
-  margin-top: 20px;
-  padding: 20px;
 }

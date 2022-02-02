@@ -17,10 +17,7 @@
         font-weight: 600;
     }
     .conect{
-        display: flex;
-        gap: 30px;
         a{
-            display: inline-block;
             color: inherit;
             transition: color .3s;
             &:hover{

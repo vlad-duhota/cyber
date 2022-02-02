@@ -27,14 +27,3 @@ $('.close').click(function(){
     $('.pop-up2').removeClass('open');
     $('.page').removeClass('no-scroll');
 });
-
-jQuery("form").submit(function() { // Событие отправки с формы
-    var form_data = jQuery(this).serialize(); // Собираем данные из полей
-    jQuery.ajax({
-        type: "POST", // Метод отправки
-        url: "sendform.php", // Путь к PHP обработчику sendform.php
-        data: form_data,
-    });
-    $(this).find('input, textarea').prop('disabled', true);
-    event.preventDefault();
-});
