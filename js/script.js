@@ -27,3 +27,5 @@ $('.close').click(function(){
     $('.pop-up2').removeClass('open');
     $('.page').removeClass('no-scroll');
 });
+
+new WOW().init();
