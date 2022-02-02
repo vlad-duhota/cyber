@@ -1,0 +1,250 @@
+// fonts
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v21-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v21-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/montserrat-v21-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v21-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+// vars
+$textColor: #1f373d;
+$primary: #0184ff;
+$sectionBg: #f6f5f4;
+$lightTextColor: #9aa5b7;
+$container: 1130px;
+
+
+
+// global
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+html{
+    font-size: 13px;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Montserrat', serif;
+    color: $textColor;
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+input{
+    font-family: 'Montserrat', serif;
+    font-size: 1.1rem;
+}
+
+textarea{
+    font-family: 'Montserrat', serif;
+    font-size: 1.1rem;
+}
+
+
+button{
+    font-family: 'Montserrat', serif;
+    font-size: 1.1rem;
+    color: $textColor;
+    font-weight: 600;
+}
+.section-title{
+    font-size: 3rem;
+    @media (max-width:768px) {
+        font-size: 2.6rem;
+    }
+    @media (max-width:475px) {
+        text-align: center;
+    }
+}
+
+// header
+@import 'header';
+
+// hero
+
+@import 'hero';
+
+// statistics
+@import 'statistics';
+
+// how it works
+@import 'how';
+
+// services
+@import 'services';
+
+// add section 
+@import 'add';
+
+
+// customize default browser scrollbar
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    padding: 10px;
+    background: $primary;
+    border-radius: 20px;
+    border: 5px solid #fff;
+}
+
+// pop-up
+.pop-up{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: top .3s;
+    &.open{
+        top: 0;
+    }
+    .text{
+        padding: 60px 40px;
+        background: #fff;
+        border-radius: 25px;
+        position: relative;
+    }
+    a{
+        display: block;
+        margin-bottom: 25px;
+        color: $textColor;
+        transition: color .3s;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:hover{
+            color: $primary;
+        }
+
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: $textColor;
+        transform: rotate(45deg);
+        font-size: 34px;
+    }
+}
+
+// pop-up2
+.pop-up2{
+    position: fixed;
+    z-index: 31;
+    width: 100%;
+    height: 100vh;
+    top: -150vh;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top .3s;
+    &.open{
+        top: 0;
+    }
+    form{
+        padding: 54px 30px;
+        border-radius: 40px;
+        background: #fff;
+        input{
+            width: 100%;
+            display: block;
+            margin: 20px auto 0;
+            border-radius: 25px;
+            background-color: #E5EFF7;
+            border: none;
+            padding: 20px;
+            transition: background.3s;
+            &:focus{
+                outline: none;
+                background-color: #bad0e0;
+            }
+        }
+        textarea{
+            padding: 20px;
+            width: 100%;
+            display: block;
+            margin: 20px auto 0;
+            border-radius: 25px;
+            background-color: #E5EFF7;
+            border: none;
+            resize: vertical;
+            min-height: 150px;
+            max-height: 250px;
+            transition: background.3s;
+            &:focus{
+                outline: none;
+                background-color: #bad0e0;
+            }
+        }
+        & > div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .close{
+            color: #909ca7;
+            font-size: 40px;
+            transform: rotate(45deg);
+        }
+        .send-btn{
+            display: block;
+            width: 100%;
+            border: none;
+            background: $primary;
+            color: #fff;
+            font-size: 24px;
+            border-radius: 25px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+    }
+}

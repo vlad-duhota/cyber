@@ -1,0 +1,111 @@
+
+.hero{
+    height: 100vh;
+    position: relative;
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 81%;
+            height: calc(100% - 110px);
+            right: 0;
+            bottom: 0;
+            background: url(../img/hero2.jpg) center / cover no-repeat;
+            @media (max-width:543px) {
+                width: 100%;
+            }
+        }
+        @media (max-width:992px) {
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 81%;
+                height: calc(100% - 110px);
+                right: 0;
+                bottom: 0;
+                background: #fff;
+                opacity: .5;
+                @media (max-width:543px) {
+                    width: 100%;
+                }
+            }
+        }
+        .hero-text{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    h1{
+        font-size: 4.6rem;
+        text-transform: capitalize;
+        background: rgba($color: #fff, $alpha: .5);
+        padding: 20px;
+        padding-left: 0;
+        border-radius: 25px;
+        @media (max-width:543px) {
+            font-size: 2.6rem;
+            br{
+                display: none;
+            }
+            padding: 20px;
+        }
+    }
+    .contact{
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+        background: $primary;
+        padding: 20px;
+        display: flex;
+        color: #fff;
+        img{
+            margin-right: 20px;
+        }
+        @media (max-width:543px) {
+            width: 100%;
+        }
+    }
+
+    .scroll-down{
+        position: absolute;
+        z-index: 2;
+        left: 25px;
+        bottom: 12%;
+        transform: rotate(90deg);
+        color: inherit;
+        transition: color .3s;
+        color: $lightTextColor;
+        img{
+            position: relative;
+            transform: rotate(-90deg);
+            left: 20px;
+            top: 10px;
+        }
+        &:active,
+        &:hover{
+            color: $primary;
+        }
+        @media (max-width:543px) {
+            bottom: 21%;
+        }
+    }
+}
+
+.phone,
+.geo{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: $textColor;
+    font-weight: 600;
+    @media (max-width:543px) {
+        width: 50%;
+    }
+}

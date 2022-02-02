@@ -1,0 +1,36 @@
+.services{
+    padding: 0 0 75px;
+    .flex-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-top: 75px;
+        .flex-column{
+            width: 45%;
+            @media (max-width:768px) {
+                width: 100%;
+            }
+        }
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+    h3{
+        font-size: 2.7rem;
+        margin-bottom: 35px;
+    }
+    .text-block{
+        &:not(:last-child){
+            margin-bottom: 55px;
+        }
+    
+        @media (max-width:768px) {
+            margin-top: 55px;
+        }
+    }
+}
